@@ -1,0 +1,143 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'title' => 'HNS PTS',
+    'description' => 'CS 1.6 HNS Mix System player statistics',
+    'subtitle' => 'HNS Mix player rating with search, sorting, top players, and individual player pages.',
+    'errors' => [
+        'player_not_found' => 'Player not found.',
+        'database_unavailable' => 'Unable to load HNS PTS data from the database.',
+    ],
+    'summary' => [
+        'players' => 'Total Players',
+        'avg_pts' => 'Average PTS',
+        'leader' => 'Leader',
+        'max_pts' => 'Max PTS',
+    ],
+    'table' => [
+        'rank' => '#',
+        'player' => 'Player',
+        'pts' => 'PTS',
+        'wins' => 'Wins',
+        'losses' => 'Loss',
+        'winrate' => 'Winrate',
+        'steamid' => 'SteamID',
+        'profile' => 'Profile',
+    ],
+    'filters' => [
+        'search_placeholder' => 'Search by nickname or SteamID',
+        'sort' => 'Sort',
+        'order' => 'Order',
+        'apply' => 'Apply',
+        'sort_values' => [
+            'pts' => 'PTS',
+            'wins' => 'Wins',
+            'losses' => 'Loss',
+            'name' => 'Name',
+        ],
+        'order_values' => [
+            'desc' => 'Descending',
+            'asc' => 'Ascending',
+        ],
+    ],
+    'empty' => [
+        'title' => 'No players found',
+        'description' => 'Check your database settings, import data, or adjust the search filters.',
+    ],
+    'buttons' => [
+        'view' => 'View',
+        'back' => 'Back to leaderboard',
+    ],
+    'top' => [
+        'top_1' => 'Top 1',
+        'top_2' => 'Top 2',
+        'top_3' => 'Top 3',
+    ],
+    'player' => [
+        'subtitle' => 'Player profile and HNS PTS statistics.',
+        'info' => 'Player Information',
+        'nickname' => 'Nickname',
+        'id' => 'ID',
+        'steamid' => 'SteamID',
+        'ip' => 'IP',
+        'playtime' => 'Playtime',
+        'lastconnect' => 'Last Connect',
+        'unknown' => '—',
+    ],
+    'widget' => [
+        'name' => 'PTS Top',
+        'description' => 'Displays a compact HNS PTS leaderboard widget.',
+        'view_all' => 'Open leaderboard',
+    ],
+    'admin' => [
+        'menu' => [
+            'header' => 'HNS PTS',
+            'settings' => 'PTS settings',
+        ],
+        'screen' => [
+            'title' => 'HNS PTS Settings',
+            'description' => 'Configure database access, schema mapping, and widget defaults.',
+        ],
+        'sections' => [
+            'database' => 'Database',
+            'schema' => 'Schema mapping',
+            'module' => 'Module options',
+            'widget' => 'Widget defaults',
+            'help' => 'Notes',
+        ],
+        'fields' => [
+            'host' => 'Host',
+            'port' => 'Port',
+            'database' => 'Database',
+            'username' => 'Username',
+            'password' => 'Password',
+            'charset' => 'Charset',
+            'table_players' => 'Players table',
+            'table_pts' => 'PTS table',
+            'column_player_pk' => 'Player primary key',
+            'column_player_name' => 'Player name column',
+            'column_pts_player_fk' => 'PTS player foreign key',
+            'column_wins' => 'Wins column',
+            'column_losses' => 'Losses column',
+            'column_pts' => 'PTS column',
+            'column_steamid' => 'SteamID column',
+            'column_ip' => 'IP column',
+            'column_playtime' => 'Playtime column',
+            'column_lastconnect' => 'Last connect column',
+            'per_page' => 'Rows per page',
+            'max_per_page' => 'Maximum per page',
+            'default_sort' => 'Default sort',
+            'default_order' => 'Default order',
+            'widget_title' => 'Widget title',
+            'widget_limit' => 'Widget limit',
+            'widget_show_wins' => 'Show wins/losses',
+            'widget_show_view_all' => 'Show leaderboard link',
+        ],
+        'buttons' => [
+            'save' => 'Save settings',
+            'test' => 'Test connection',
+            'public_page' => 'Open public page',
+        ],
+        'messages' => [
+            'saved' => 'Settings saved successfully.',
+            'save_failed' => 'Failed to save settings.',
+            'test_success' => 'Connection test completed successfully.',
+            'test_failed' => 'Connection test failed.',
+            'validation_failed' => 'Please fix the highlighted fields.',
+        ],
+        'validation' => [
+            'required' => 'This field is required.',
+        ],
+        'notes' => [
+            'override' => 'Settings are stored in storage/app/modules/hnspts/settings.json and override the default config file.',
+            'route' => 'If you change route_prefix in Resources/config/hnspts.php, clear the Flute cache afterwards.',
+            'widget' => 'Widgets are auto-registered from the Widgets directory after module activation.',
+        ],
+        'test' => [
+            'players_count' => 'Players table rows',
+            'pts_count' => 'PTS table rows',
+        ],
+    ],
+];

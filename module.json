@@ -1,0 +1,19 @@
+{
+  "name": "HnsPts",
+  "version": "1.1.0",
+  "description": "Flute CMS module for CS 1.6 HNS Mix PTS leaderboards and player profiles",
+  "authors": [
+    "cultura"
+  ],
+  "providers": [
+    "Flute\\Modules\\HnsPts\\Providers\\HnsPtsProvider"
+  ],
+  "dependencies": {
+    "php": ">=8.1",
+    "flute": ">=1.0.0",
+    "extensions": [
+      "pdo",
+      "pdo_mysql"
+    ]
+  }
+}

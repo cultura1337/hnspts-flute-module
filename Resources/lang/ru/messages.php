@@ -1,0 +1,143 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'title' => 'HNS PTS',
+    'description' => 'Статистика игроков CS 1.6 HNS Mix System',
+    'subtitle' => 'Рейтинг игроков HNS Mix с поиском, сортировкой, топом игроков и отдельными страницами профиля.',
+    'errors' => [
+        'player_not_found' => 'Игрок не найден.',
+        'database_unavailable' => 'Не удалось загрузить данные HNS PTS из базы данных.',
+    ],
+    'summary' => [
+        'players' => 'Всего игроков',
+        'avg_pts' => 'Средний PTS',
+        'leader' => 'Лидер',
+        'max_pts' => 'Максимум PTS',
+    ],
+    'table' => [
+        'rank' => '#',
+        'player' => 'Игрок',
+        'pts' => 'PTS',
+        'wins' => 'Победы',
+        'losses' => 'Поражения',
+        'winrate' => 'Винрейт',
+        'steamid' => 'SteamID',
+        'profile' => 'Профиль',
+    ],
+    'filters' => [
+        'search_placeholder' => 'Поиск по нику или SteamID',
+        'sort' => 'Сортировка',
+        'order' => 'Порядок',
+        'apply' => 'Применить',
+        'sort_values' => [
+            'pts' => 'PTS',
+            'wins' => 'Победы',
+            'losses' => 'Поражения',
+            'name' => 'Имя',
+        ],
+        'order_values' => [
+            'desc' => 'По убыванию',
+            'asc' => 'По возрастанию',
+        ],
+    ],
+    'empty' => [
+        'title' => 'Игроки не найдены',
+        'description' => 'Проверь настройки базы, импорт данных или параметры поиска.',
+    ],
+    'buttons' => [
+        'view' => 'Открыть',
+        'back' => 'Назад к рейтингу',
+    ],
+    'top' => [
+        'top_1' => 'Топ 1',
+        'top_2' => 'Топ 2',
+        'top_3' => 'Топ 3',
+    ],
+    'player' => [
+        'subtitle' => 'Профиль игрока и статистика HNS PTS.',
+        'info' => 'Информация об игроке',
+        'nickname' => 'Ник',
+        'id' => 'ID',
+        'steamid' => 'SteamID',
+        'ip' => 'IP',
+        'playtime' => 'Время игры',
+        'lastconnect' => 'Последнее подключение',
+        'unknown' => '—',
+    ],
+    'widget' => [
+        'name' => 'PTS Top',
+        'description' => 'Показывает компактный виджет рейтинга HNS PTS.',
+        'view_all' => 'Открыть рейтинг',
+    ],
+    'admin' => [
+        'menu' => [
+            'header' => 'HNS PTS',
+            'settings' => 'Настройки PTS',
+        ],
+        'screen' => [
+            'title' => 'Настройки HNS PTS',
+            'description' => 'Настройка доступа к базе, схемы таблиц и параметров виджета.',
+        ],
+        'sections' => [
+            'database' => 'База данных',
+            'schema' => 'Сопоставление схемы',
+            'module' => 'Параметры модуля',
+            'widget' => 'Параметры виджета',
+            'help' => 'Заметки',
+        ],
+        'fields' => [
+            'host' => 'Хост',
+            'port' => 'Порт',
+            'database' => 'База данных',
+            'username' => 'Пользователь',
+            'password' => 'Пароль',
+            'charset' => 'Кодировка',
+            'table_players' => 'Таблица игроков',
+            'table_pts' => 'Таблица PTS',
+            'column_player_pk' => 'Первичный ключ игрока',
+            'column_player_name' => 'Колонка имени игрока',
+            'column_pts_player_fk' => 'Внешний ключ игрока в PTS',
+            'column_wins' => 'Колонка побед',
+            'column_losses' => 'Колонка поражений',
+            'column_pts' => 'Колонка PTS',
+            'column_steamid' => 'Колонка SteamID',
+            'column_ip' => 'Колонка IP',
+            'column_playtime' => 'Колонка времени игры',
+            'column_lastconnect' => 'Колонка последнего входа',
+            'per_page' => 'Записей на странице',
+            'max_per_page' => 'Максимум на странице',
+            'default_sort' => 'Сортировка по умолчанию',
+            'default_order' => 'Порядок по умолчанию',
+            'widget_title' => 'Заголовок виджета',
+            'widget_limit' => 'Лимит виджета',
+            'widget_show_wins' => 'Показывать победы/поражения',
+            'widget_show_view_all' => 'Показывать ссылку на рейтинг',
+        ],
+        'buttons' => [
+            'save' => 'Сохранить настройки',
+            'test' => 'Проверить подключение',
+            'public_page' => 'Открыть публичную страницу',
+        ],
+        'messages' => [
+            'saved' => 'Настройки успешно сохранены.',
+            'save_failed' => 'Не удалось сохранить настройки.',
+            'test_success' => 'Проверка подключения прошла успешно.',
+            'test_failed' => 'Проверка подключения не удалась.',
+            'validation_failed' => 'Исправьте ошибки в форме.',
+        ],
+        'validation' => [
+            'required' => 'Это поле обязательно.',
+        ],
+        'notes' => [
+            'override' => 'Настройки сохраняются в storage/app/modules/hnspts/settings.json и переопределяют стандартный config.',
+            'route' => 'Если меняешь route_prefix в Resources/config/hnspts.php, очисти кеш Flute после правки.',
+            'widget' => 'Виджеты автоматически регистрируются из папки Widgets после активации модуля.',
+        ],
+        'test' => [
+            'players_count' => 'Строк в таблице игроков',
+            'pts_count' => 'Строк в таблице PTS',
+        ],
+    ],
+];
