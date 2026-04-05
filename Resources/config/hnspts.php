@@ -11,11 +11,11 @@ return [
     'default_order' => 'desc',
 
     'db' => [
-        'host' => '172.17.0.1',
+        'host' => '',
         'port' => 3306,
-        'database' => 's3_pts',
-        'username' => 'u3_NhzjcfZem1',
-        'password' => 'UHrTCZ^@xHgl!Gf+b+79iSSV',
+        'database' => '',
+        'username' => '',
+        'password' => '',
         'charset' => 'utf8mb4',
     ],
 
