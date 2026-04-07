@@ -313,7 +313,6 @@ Example:
 
 ```md
 ![Leaderboard](screenshots/leaderboard.png)
-![Player Profile](screenshots/player-profile.png)
 ![Admin Panel](screenshots/admin-panel.png)
 ```
 
