@@ -312,8 +312,8 @@ Recommended screenshots for the repository:
 Example:
 
 ```md
-![Leaderboard](screenshots/leaderboard.png)
-![Admin Panel](screenshots/admin-panel.png)
+![Leaderboard](screenshots/leaderboard.jpg)
+![Admin Panel](screenshots/admin-panel.jpg)
 ```
 
 ## Use Case
